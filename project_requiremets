@@ -1,0 +1,32 @@
+Job application management
+
+Product Goal
+This application is created to help user to manage all positions for which user has applied. Keeping all data at one place allows user to observe the progress of his job search. User can easily keep track of each job position, update it status, save notes and related links.
+
+User Stories
+As User I want to save job position so then I can view it later
+As User I want to view all positions I have applied for so I can view them at one place. 
+As User I want to change application status from "applied" to "decliend" or "in progress" 
+As User I want to view full job job description
+As User I want to highlit triger phrases in job description
+
+
+MVP (CRUD): 
+- Create application record 
+- View all application records for user
+- Change application status 
+- Delete application record
+
+Models:
+- User
+- Application
+- Job
+
+React Components
+App 
+   - Headers
+   - Applications
+   - Application details
+   - Create application
+   - Create user
+   - Login

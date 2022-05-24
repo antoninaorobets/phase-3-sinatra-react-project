@@ -6,4 +6,9 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
 
+  get "/create" do
+    Job.create_job(params[:code])
+  end
+
 end
+
