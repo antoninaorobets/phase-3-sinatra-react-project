@@ -12,8 +12,8 @@ class Job < ActiveRecord::Base
             :title => resp.css(".top-card-layout__title").text,
             :company => resp.css(".topcard__org-name-link.topcard__flavor--black-link").text.strip,
             :location => resp.css(".topcard__flavor.topcard__flavor--bullet").text.strip,
-            # :job_url => url,
-            # :company_link => resp.css(".topcard__org-name-link.topcard__flavor--black-link").attribute("href").value,
+            :url => url,
+            :company_link => resp.css(".topcard__org-name-link.topcard__flavor--black-link").attribute("href").value,
             :logo => resp.css("img.artdeco-entity-image.artdeco-entity-image--square-5").attribute("data-delayed-url").value,
             :description => resp.css(".show-more-less-html__markup.show-more-less-html__markup--clamp-after-5")
             }

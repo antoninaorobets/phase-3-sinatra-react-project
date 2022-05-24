@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_24_000421) do
+ActiveRecord::Schema.define(version: 2022_05_24_155612) do
 
   create_table "applications", force: :cascade do |t|
     t.integer "user_id"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2022_05_24_000421) do
     t.string "location"
     t.string "logo"
     t.string "description"
+    t.string "url"
+    t.string "company_link"
   end
 
   create_table "users", force: :cascade do |t|
