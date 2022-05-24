@@ -24,6 +24,8 @@ GEM
     date (3.2.2)
     diff-lcs (1.4.4)
     eventmachine (1.2.7)
+    faker (2.19.0)
+      i18n (>= 1.6, < 2)
     ffi (1.15.3)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
@@ -104,6 +106,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 6.1)
   database_cleaner (~> 2.0)
+  faker
   nokogiri
   open-uri
   pry (~> 0.14.1)
