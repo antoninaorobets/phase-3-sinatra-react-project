@@ -37,6 +37,7 @@ gem "require_all", "~> 3.0"
 gem "open-uri"
 gem "nokogiri"
 gem "faker"
+gem 'regex', '~> 1.1', '>= 1.1.1'
 
 # These gems will only be used when we are running the application locally
 group :development do
