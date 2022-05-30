@@ -6,5 +6,23 @@ class ApplicationController < Sinatra::Base
     User.first.to_json
   end
 
+  # save new application
+  post "/application" do
+    user = User.find_by(id: params[:user_id])
+    job_code = params[:link].match(/[0-9]{10}/).to_s    
+    # begin
+    if !job_code.empty?
+      job = Job.find_by(code: job_code)
+      if !job 
+        job_data = job_info(job_code)
+        job = Job.create(job_info(job_data))
+      end
+      application = user.applications.create(status: "applied", job: job)
+      application.to_json(include: :job)
+    #  else
+    #    raise("invalid age")
+    end
+    # end
+  end
 end
 
