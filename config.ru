@@ -1,4 +1,5 @@
 require_relative "./config/environment"
+require_relative "./job_scraper"
 
 # Allow CORS (Cross-Origin Resource Sharing) requests
 use Rack::Cors do
@@ -12,4 +13,6 @@ end
 use Rack::JSONBodyParser
 
 # Our application
+use JobsController
+
 run ApplicationController
