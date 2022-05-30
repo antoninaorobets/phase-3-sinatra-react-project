@@ -6,6 +6,11 @@ class ApplicationController < Sinatra::Base
     User.first.to_json
   end
 
+  # get all applications for user
+  get "/applications" do
+      User.find(params[:user_id]).applications.order("created_at DESC").to_json(include: :job)
+  end
+
   # save new application
   post "/application" do
     user = User.find_by(id: params[:user_id])
