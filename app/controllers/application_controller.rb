@@ -24,5 +24,13 @@ class ApplicationController < Sinatra::Base
     end
     # end
   end
+
+  # change application staus
+  patch  "/application/:id" do
+    user = User.find_by(id: params[:user_id])
+    application = user.applications.find_by(id: params[:id])
+      application.update(status: params[:status])
+      application.to_json
+  end
 end
 
