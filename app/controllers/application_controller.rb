@@ -32,5 +32,11 @@ class ApplicationController < Sinatra::Base
       application.update(status: params[:status])
       application.to_json
   end
+
+  # delet application
+  delete "/application/:id" do
+    # user = User.find_by(id: params[:user_id])
+    Application.delete(params[:id]).to_json
+  end
 end
 
