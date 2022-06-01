@@ -1,4 +1,47 @@
 # Phase 3 Project Guidelines
+https://6294f9ebb26d0e0467445552--steady-peony-5144f6.netlify.app/
+
+Job application management
+
+Product Goal
+This application is created to help user to manage all positions for which user has applied. Keeping all data at one place allows user to observe the progress of his job search. User can easily keep track of each job position, update it status, save notes and related links.
+
+User Stories
+As User I want to save job position so then I can monitor it 
+As User I want to view all positions I have applied for so I can view them at one place. 
+As User I want to change application status from "applied" to "declined" or "in progress" 
+As User I want to view full job job description (not implemented)
+As User I want to highlit triger phrases in job description (not implemented)
+
+
+MVP: 
+- Create application record 
+- View all application records for user
+- Change application status 
+- Delete application record
+
+Models:
+ Application
+   Create, Get, Patch, Delete
+ Job
+   Get, Create
+ User
+
+
+
+   Linkedin link https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/2917053551
+
+
+Todos for late implementation:
+1. User authentication
+2. User as context
+3. Rotes. 
+4. Move create application to independent component
+5. Create Job Description component
+6. Highlights on JD
+
+
+
 
 ## Learning Goals
 
