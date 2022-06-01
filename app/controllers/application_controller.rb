@@ -20,14 +20,14 @@ class ApplicationController < Sinatra::Base
       job = Job.find_by(code: job_code)
       if !job 
         job_data = job_info(job_code)
-        job = Job.create(job_info(job_data))
+        job = Job.create(job_data)
       end
       application = user.applications.create(status: "applied", job: job)
       application.to_json(include: :job)
     #  else
     #    raise("invalid age")
-    end
     # end
+    end
   end
 
   # change application staus
